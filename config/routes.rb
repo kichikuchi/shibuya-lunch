@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  root 'restaurants#index'
 	namespace :api, { format: 'json'  } do
 		resources :restaurants
 	end
-  get 'restaurants/index'
+
+	resources :restaurants
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

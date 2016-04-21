@@ -1,0 +1,18 @@
+<h1><%= @restaurant.name %></h1>
+
+<ul>
+	<li>
+		メモ：<%= @restaurant.note %>
+	</li>
+	<li>
+		緯度：<%= @restaurant.latitude %>
+	</li>
+	<li>
+		経度：<%= @restaurant.longitude %>
+	</li>
+	<li>
+		食べログURL：<%= @restaurant.tabelog_url %>
+	</li>
+</ul>
+
+<p><%= link_to "HOME", restaurants_path %></p>
