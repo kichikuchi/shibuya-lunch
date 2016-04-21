@@ -1,0 +1,39 @@
+<%= form_for @restaurant do |f| %>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+		<% if @restaurant.errors.any? %>
+			<%= @restaurant.errors.messages[:name][0] %>
+		<% end %>
+<br><br>
+		<%= f.label :note %>
+		<%= f.text_field :note %>
+		<% if @restaurant.errors.any? %>
+			<%= @restaurant.errors.messages[:note][0] %>
+		<% end %>
+<br><br>
+		<%= f.label :latitude %>
+		<%= f.text_field :latitude %>
+		<% if @restaurant.errors.any? %>
+			<%= @restaurant.errors.messages[:latitude][0] %>
+		<% end %>
+<br><br>
+		<%= f.label :longitude %>
+		<%= f.text_field :longitude %>
+		<% if @restaurant.errors.any? %>
+			<%= @restaurant.errors.messages[:longitude][0] %>
+		<% end %>
+<br><br>
+		<%= f.label :tabelog_url %>
+		<%= f.text_field :tabelog_url %>
+		<% if @restaurant.errors.any? %>
+			<%= @restaurant.errors.messages[:tabelog_url][0] %>
+		<% end %>
+
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+
+<% end %>
