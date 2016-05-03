@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160412155435) do
+ActiveRecord::Schema.define(version: 20160503030855) do
 
   create_table "genres", force: :cascade do |t|
+    t.string   "genre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "genre"
     t.integer  "genre_id"
   end
 
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20160412155435) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "remember_digest"
   end
 
 end
