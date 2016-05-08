@@ -12,6 +12,7 @@ class RestaurantsController < ApplicationController
 	def new
 		@restaurant = Restaurant.new
 	end
+
 	def create
 		@restaurant = Restaurant.new(restaurant_params)
 		if @restaurant.save
@@ -19,6 +20,13 @@ class RestaurantsController < ApplicationController
 		else
 			render 'new'
 		end
+	end
+
+	def destroy
+		@restaurant = Restaurant.find(params[:id])
+		@restaurant.destroy
+		flash[:success] = "削除しました！"
+		redirect_to restaurants_path
 	end
 
 	def logged_in_user
