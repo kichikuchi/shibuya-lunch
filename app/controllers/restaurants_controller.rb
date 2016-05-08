@@ -1,4 +1,6 @@
 class RestaurantsController < ApplicationController
+	before_action :logged_in_user
+
   def index
 		@restaurants = Restaurant.all
   end
@@ -16,6 +18,13 @@ class RestaurantsController < ApplicationController
 			redirect_to restaurants_path
 		else
 			render 'new'
+		end
+	end
+
+	def logged_in_user
+		unless logged_in?
+			flash[:danger] = "Please log in."
+			redirect_to login_url
 		end
 	end
 
