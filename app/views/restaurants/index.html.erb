@@ -1,4 +1,4 @@
-<h1>Restaurants</h1>
+<h1>ご飯屋さん一覧</h1>
 <ul>
 	<% @restaurants.each do |restaurant| %>
 		<li> 
@@ -7,5 +7,4 @@
 	<% end %>
 </ul>
 
-<p><%= link_to "Add New Restaurant", new_restaurant_path, class: "btn btn-lg" %></p>
-<p><%= link_to "Log out", login_path, method: :delete, class: "btn btn-lg"%></p>
+<p><%= link_to "ご飯屋さんを追加", new_restaurant_path, class: "btn btn-lg btn-primary" %></p>
