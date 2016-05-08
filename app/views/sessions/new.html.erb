@@ -1,8 +1,10 @@
-<h1>Log in</h1>
-<%= form_for(:session, url:login_path) do |f| %>
-	<%= f.label :name %><br>
-	<%= f.text_field :name %><br><br>
-	<%= f.label :password %><br>
-	<%= f.password_field :password %><br><br>
-	<%= f.submit "Log in" %>
-<% end %>
+<div class="center jumbotron">
+	<h1>Log in</h1>
+	<%= form_for(:session, url:login_path) do |f| %>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %><br><br>
+		<%= f.label :password %><br>
+		<%= f.password_field :password %><br><br>
+		<%= f.submit "Log in" %>
+	<% end %>
+</div>
